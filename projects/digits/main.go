@@ -3,5 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, world!!!")
+    var myString string
+    fmt.Scanln(&myString) 
+    
+    var mxrune rune = 0 
+    for _, v := range myString {
+        if v > mxrune {
+            mxrune = v
+        }
+    }
+    
+    fmt.Printf("%c", mxrune)
 }
